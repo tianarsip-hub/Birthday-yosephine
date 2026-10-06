@@ -370,17 +370,20 @@ button:hover {
 }
 
 .close-note {
-    margin-top: 15px;
-    background-color: transparent;
-    border: none;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border: 1px solid #c9e1eb;
     color: #7fa3b5;
     font-size: 13px;
-    padding: 8px 12px;
+    padding: 9px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .close-note:hover {
     background-color: #d8ebf3;
-    transform: none;
+    transform: translateY(-2px);
 }
 
 .final-message {
