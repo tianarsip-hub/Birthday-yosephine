@@ -233,7 +233,7 @@ button:hover {
 }
 
 .letter-content.open {
-    max-height: 1000px;
+    max-height: 2000px;
     margin-top: 30px;
     padding: 35px 25px;
     border-color: #c9e1eb;
@@ -416,4 +416,11 @@ button:hover {
     color: #7fa3b5;
     font-size: 12px;
     font-style: italic;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 42px;
+        letter-spacing: 6px;
+    }
 }
