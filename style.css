@@ -1,0 +1,419 @@
+body {
+    margin: 0;
+    background-color: #eaf4fa;
+    color: #304b5a;
+    font-family: Georgia, serif;
+}
+
+.opening {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #7fa3b5;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 60px;
+    letter-spacing: 12px;
+    font-weight: normal;
+    margin: 0 0 35px;
+}
+
+button {
+    background-color: white;
+    color: #5d8396;
+    border: 1px solid #b9d9e8;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #d8ebf3;
+    transform: translateY(-3px);
+}
+
+.birthday {
+    min-height: 70vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.birthday h2 {
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 1.3;
+    margin: 15px 0 30px;
+}
+
+.message {
+    max-width: 550px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #526f7d;
+    margin: 10px 0;
+}
+
+.music {
+    min-height: 60vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.music-card {
+    width: 100%;
+    max-width: 420px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #c9e1eb;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-sizing: border-box;
+}
+
+.music-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #d8ebf3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #5d8396;
+    transition: 0.3s;
+}
+
+.song-info {
+    flex: 1;
+    text-align: left;
+}
+
+.song-info h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+    font-weight: normal;
+    color: #304b5a;
+}
+
+.song-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #7fa3b5;
+}
+
+.play-button {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #b9d9e8;
+    color: #5d8396;
+    font-size: 16px;
+}
+
+.play-button:hover {
+    background-color: #d8ebf3;
+    transform: scale(1.05);
+}
+
+.music-icon.playing {
+    transform: scale(1.1);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.note {
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+.letter-card {
+    width: 100%;
+    max-width: 420px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid #c9e1eb;
+    border-radius: 20px;
+    padding: 40px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.letter-card:hover {
+    transform: translateY(-5px);
+    background-color: white;
+}
+
+.envelope {
+    font-size: 45px;
+    color: #7fa3b5;
+    margin-bottom: 15px;
+}
+
+.letter-card h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin: 10px 0;
+    color: #304b5a;
+}
+
+.letter-card p {
+    color: #7fa3b5;
+    font-size: 14px;
+}
+
+.letter-content {
+    display: block;
+    max-width: 600px;
+    max-height: 0;
+    margin-top: 0;
+    padding: 0 25px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-sizing: border-box;
+    line-height: 1.8;
+    color: #526f7d;
+
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        max-height 1s ease,
+        margin-top 0.8s ease,
+        padding 0.8s ease,
+        border-color 0.8s ease;
+}
+
+.letter-content.open {
+    max-height: 1000px;
+    margin-top: 30px;
+    padding: 35px 25px;
+    border-color: #c9e1eb;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.letter-content h2 {
+    font-weight: normal;
+    color: #304b5a;
+    margin-bottom: 25px;
+}
+
+.letter-content p {
+    margin: 18px 0;
+}
+
+.letter-content .ending {
+    margin-top: 30px;
+    color: #5d8396;
+}
+
+/* Animasi muncul */
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.music.fade-in {
+    animation-delay: 0.4s;
+}
+
+.note.fade-in {
+    animation-delay: 0.8s;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.stars span {
+    position: absolute;
+    color: #7faec1;
+    opacity: 0.5;
+    font-size: 18px;
+    animation: floatStar 6s ease-in-out infinite;
+}
+
+.stars span:nth-child(1) {
+    top: 15%;
+    left: 12%;
+    font-size: 22px;
+    animation-delay: 0s;
+}
+
+.stars span:nth-child(2) {
+    top: 25%;
+    right: 15%;
+    font-size: 13px;
+    animation-delay: 1s;
+}
+
+.stars span:nth-child(3) {
+    top: 55%;
+    left: 8%;
+    font-size: 16px;
+    animation-delay: 2s;
+}
+
+.stars span:nth-child(4) {
+    top: 70%;
+    right: 10%;
+    font-size: 25px;
+    animation-delay: 3s;
+}
+
+.stars span:nth-child(5) {
+    top: 82%;
+    left: 20%;
+    font-size: 12px;
+    animation-delay: 1.5s;
+}
+
+.stars span:nth-child(6) {
+    top: 45%;
+    right: 25%;
+    font-size: 17px;
+    animation-delay: 2.5s;
+}
+
+@keyframes floatStar {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(15deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.opening,
+.birthday,
+.music,
+.note {
+    position: relative;
+    z-index: 1;
+}
+
+.music-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #7fa3b5;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.close-note {
+    margin-top: 15px;
+    background-color: transparent;
+    border: none;
+    color: #7fa3b5;
+    font-size: 13px;
+    padding: 8px 12px;
+}
+
+.close-note:hover {
+    background-color: #d8ebf3;
+    transform: none;
+}
+
+.final-message {
+    margin-top: 45px;
+    padding-top: 25px;
+    border-top: 1px solid #d8e9f0;
+    opacity: 0.8;
+}
+
+.final-message span {
+    color: #7fa3b5;
+    font-size: 18px;
+}
+
+.final-message p {
+    margin: 10px 0 5px;
+    color: #5d8396;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.final-message small {
+    color: #7fa3b5;
+    font-size: 12px;
+}
+
+.blessing {
+    text-align: right;
+    margin-top: 25px;
+}
+
+.blessing small {
+    color: #7fa3b5;
+    font-size: 12px;
+    font-style: italic;
+}

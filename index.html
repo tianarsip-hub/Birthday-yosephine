@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Yosephine Manurung</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="stars">
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>✧</span>
+    </div>
+
+   <main class="opening">
+
+    <p class="small-text">a little something for u</p>
+
+    <h1>Yosephine</h1>
+
+    <button onclick="openLetter()">✦✦ OPEN ✦✦</button>
+
+   </main> 
+
+   <section id="birthday" class="birthday">
+        <p class="small-text">today is ur day</p>
+
+        <h2>Happy Birthday, <br> Yosephine ✦</h2>
+
+        <p class="message">
+            I may not know you that well,<br>
+            but from the little conversations we've had,<br>    
+            I think you seem like a genuinely kind person.
+        </p>
+
+        <p class="message">
+            and honestly... you pretty gorgeous too.<br>
+            maybe you already know that..<br>
+            I mean, that one was kinda hard to ignore.
+        </p>
+
+   </section>
+
+   <section class="music">
+    
+    <p class="small-text">a song for today</p>
+
+    <div class="music-card">
+
+        <div class="music-icon">♪</div>
+
+        <div class="song-info">
+            <h3>The Most Beautiful Thing</h3>
+            <p>Bruno Major</p>
+        </div>
+
+        <button class="play-button" onclick="toggleMusic()">
+            ▶
+        </button>
+
+    </div>
+
+    <p class="music-note">
+        maybe this song will make your day a little nicer ✦
+    </p>
+
+   </section>
+
+   <audio id="birthdayMusic" src="music/beautiful thing.mp3"></audio>
+
+   <section class="note">
+
+    <p class="small-text">something i wanted to say</p>
+
+    <div class="letter-card" onclick="openNote()">
+
+        <div class="envelope">
+            ✉
+        </div>
+
+        <h2>just a little note</h2>
+
+        <p>open when you're ready ✦</p>
+
+    </div>
+
+    <div class="letter-content" id="letterContent">
+
+        <h2>Dear Yosephine,</h2>
+
+        <p>
+            I don't really know u that well,
+            and u don't know me either,
+            and maybe that's what makes this 
+            a little funny.
+        </p>
+
+        <p>
+            we've only talked through  Instagram,
+            but I still thought u deserved 
+            a little something for ur birthday.
+        </p>
+
+        <p>
+            You're genuinely kind,
+            you're pretty gorgeous,
+            and honestly, you're just
+            quite an interesting person to know.
+        </p>
+
+        <p>
+            So yeah, nothing too serious.
+            Just a little birthday surprise
+            from someone who thinks you're cool.
+        </p>
+
+        <p>
+            I hope u have a really good year ahead.
+            More good days, more reasons to smile,
+            and hopefully a lot of beautiful moments 
+            throughout ur college life.
+        </p>
+
+        <p>
+            Stay kind, stay gorgeous,
+            and keep  being u.
+        </p>
+
+        <p class="ending">
+            Once more Happy Birthday, Yosephine. ✦
+        </p>
+
+        <button class="close-note" onclick="closeNote()">
+            close note ✦
+        </button>
+
+        <div class="final-message">
+            <span>✦</span>
+            <p>✦ that's all ✦</p>
+            <small>hope life treats u beautifully, Yosephine.</small>
+        </div>
+
+        <div class="blessing">
+            <small>God Bless U</small>
+        </div>
+
+    </div>
+
+   </section>
+   <script src="script.js"></script>
+
+</body>
+</html>
